@@ -1,17 +1,12 @@
-
+/* eslint-disable react/no-unused-prop-types */
 import './App.css';
-import PropTypes from 'prop-types'
 
 function App() {
   return (
     <div className="App">
       <h1> Calculator</h1>
       <p>Welcome to my calculator</p>
-     </div>
+    </div>
   );
-}
-
-App.propTypes = {
-  name : PropTypes.string
 }
 export default App;
