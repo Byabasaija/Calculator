@@ -27,6 +27,7 @@ This is a calculator app create with react.
 
 ### Author
 - Pascal Byabasaija
+
 [Github](https://github.com/Byabasaija)
 
 ### License
