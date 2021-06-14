@@ -17,9 +17,13 @@ function calculate(calculatorData, btnName) {
     total = operate(total, next, operation);
     next = '';
     operation = null;
-  } else {
-    total += btnName;
-  }
+  } else if(btnName === '.') {
+    if (next) {
+      next += btnName;
+    } else {
+      total += btnName;
+    }
+  } else if('1'||'2'||'3'||'4'||'5')
 }
 
 export default calculate;
