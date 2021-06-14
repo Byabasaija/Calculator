@@ -35,7 +35,7 @@ const ButtonPannel = ({ handleClick }) => (
     <div>
       <Button handleClick={() => handleClick('0')} label="0" />
       <Button handleClick={() => handleClick('.')} label="." />
-      <Button handleClick={() => handleClick('0')} label="=" />
+      <Button handleClick={() => handleClick('=')} label="=" />
     </div>
   </>
 );
