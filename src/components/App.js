@@ -6,11 +6,18 @@ import calculate from '../logic/calculate';
 class App extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { total: '', next: '', operation: null };
+    this.state = {
+      total: '',
+      next: '',
+      operation: null,
+    };
   }
 
   handleClick(btnName) {
-    const { total, next, operation } = this.state;
+    let { total } = this.state;
+    total = total === 'Error' ? '' : total;
+    const { next, operation } = this.state;
+
     this.setState(calculate({ total, next, operation }, btnName));
   }
 
@@ -21,23 +28,21 @@ class App extends React.Component {
     if (total) {
       result += total;
     }
-
-    if (next) {
-      result += next;
-    }
-
     if (operation) {
       result += operation;
+    }
+    if (next) {
+      result += next;
     }
     return result;
   }
 
   render() {
     return (
-      <>
+      <div>
         <Display result={this.result()} />
         <ButtonPannel handleClick={(label) => this.handleClick(label)} />
-      </>
+      </div>
 
     );
   }

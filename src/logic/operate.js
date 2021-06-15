@@ -19,7 +19,12 @@ function operate(numberOne, numberTwo, operation) {
       result = x.plus(y);
       break;
     case '÷':
-      result = x.div(y);
+      if (y.toString() !== '0') {
+        result = x.div(y);
+      } else {
+        result = "Can't devide by 0";
+      }
+
       break;
     default:
       result = 0;
