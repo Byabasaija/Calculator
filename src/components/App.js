@@ -6,11 +6,7 @@ import calculate from '../logic/calculate';
 class App extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      total: '',
-      next: '',
-      operation: null,
-    };
+    this.state = { total: '', next: '', operation: null };
   }
 
   handleClick(btnName) {
@@ -25,21 +21,23 @@ class App extends React.Component {
     if (total) {
       result += total;
     }
-    if (operation) {
-      result += operation;
-    }
+
     if (next) {
       result += next;
+    }
+
+    if (operation) {
+      result += operation;
     }
     return result;
   }
 
   render() {
     return (
-      <div>
+      <>
         <Display result={this.result()} />
         <ButtonPannel handleClick={(label) => this.handleClick(label)} />
-      </div>
+      </>
 
     );
   }
