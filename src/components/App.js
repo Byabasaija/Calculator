@@ -1,28 +1,26 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Display from './Display';
 import ButtonPannel from './ButtonPannel';
 import calculate from '../logic/calculate';
 
-class App extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      total: '',
-      next: '',
-      operation: null,
-    };
-  }
+const App = () => {
+  const [total, setTotal] = useState('');
+  const [next, setNext] = useState('');
+  const [operation, setOperation] = useState(null);
 
-  handleClick(btnName) {
-    let { total } = this.state;
-    total = total === 'Error' ? '' : total;
-    const { next, operation } = this.state;
+  const handleClick = (btnName) => {
+    const calc = calculate({
+      total: total === 'Error' ? '' : total,
+      next,
+      operation,
+    }, btnName);
 
-    this.setState(calculate({ total, next, operation }, btnName));
-  }
+    setTotal(calc.total);
+    setNext(calc.next);
+    setOperation(calc.operation);
+  };
 
-  result() {
-    const { total, next, operation } = this.state;
+  const result = () => {
     let result = '';
 
     if (total) {
@@ -35,17 +33,13 @@ class App extends React.Component {
       result += next;
     }
     return result;
-  }
-
-  render() {
-    return (
-      <div>
-        <Display result={this.result()} />
-        <ButtonPannel handleClick={(label) => this.handleClick(label)} />
-      </div>
-
-    );
-  }
-}
+  };
+  return (
+    <div>
+      <Display result={result()} />
+      <ButtonPannel handleClick={(label) => handleClick(label)} />
+    </div>
+  );
+};
 
 export default App;
