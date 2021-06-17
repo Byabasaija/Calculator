@@ -1,6 +1,6 @@
 import Big from 'big.js';
 
-function operate(numberOne, numberTwo, operation) {
+const operate = (numberOne, numberTwo, operation) => {
   const x = new Big(numberOne);
   const y = new Big(numberTwo);
   let result;
@@ -31,6 +31,6 @@ function operate(numberOne, numberTwo, operation) {
   }
 
   return result.toString();
-}
+};
 
 export default operate;
