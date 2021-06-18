@@ -1,4 +1,4 @@
-.header {
+.Navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -6,7 +6,7 @@
     color: white;
   }
   
-  .header__link {
+  .Navbar__link {
     margin: 10px 20px;
     text-decoration: none;
     color: white;
