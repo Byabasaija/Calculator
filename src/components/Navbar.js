@@ -1,15 +1,15 @@
 import { Link } from 'react-router-dom';
 import './Navbar.css';
 
-const Header = () => (
-  <nav className="header">
+const Navbar = () => (
+  <nav className="Navbar">
     <h1>Math Magicians</h1>
-    <div className="header__menu">
-      <Link className="header__link" to="/"> Home </Link>
-      <Link className="header__link" to="/app"> Calculator </Link>
-      <Link className="header__link" to="/quote"> Quote </Link>
+    <div className="Navbar__menu">
+      <Link className="Navbar__link" to="/"> Home </Link>
+      <Link className="Navbar__link" to="/app"> Calculator </Link>
+      <Link className="Navbar__link" to="/quote"> Quote </Link>
     </div>
   </nav>
 );
 
-export default Header;
+export default Navbar;
