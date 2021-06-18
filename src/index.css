@@ -31,4 +31,6 @@ code {
 #root {
   padding: 0;
   margin: 0;
+  background-color: darkgrey;
+  height: 100vh;
 }

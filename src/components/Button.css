@@ -1,0 +1,27 @@
+.btn {
+    border: none;
+    outline: none;
+    font-size: 20pt;
+    border-radius: 10%;
+    width: 165px;
+    height: 100px;
+    display: inline-grid;
+    align-items: center;
+    margin: 5px;
+    box-shadow: 0 0 4px rgb(84 84 141 / 36%);
+    cursor: pointer;
+    background-color: #f1f2f6;
+  }
+  
+  .btn--orange {
+    background-color: #ff7f50;
+  }
+  
+  .btn:active {
+    transform: scale(0.95);
+  }
+  
+  .btn--span-2 {
+    width: calc(165px *2);
+   
+  }

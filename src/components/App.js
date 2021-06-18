@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Display from './Display';
 import ButtonPannel from './ButtonPannel';
 import calculate from '../logic/calculate';
+import './App.css';
 
 const App = () => {
   const [total, setTotal] = useState('');
@@ -35,9 +36,14 @@ const App = () => {
     return result;
   };
   return (
-    <div>
-      <Display result={result()} />
-      <ButtonPannel handleClick={(label) => handleClick(label)} />
+    <div className="flex">
+
+      <h2>Let&apos;s do some math</h2>
+
+      <div className="App">
+        <Display result={result()} />
+        <ButtonPannel handleClick={(label) => handleClick(label)} />
+      </div>
     </div>
   );
 };
