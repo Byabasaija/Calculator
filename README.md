@@ -1,6 +1,8 @@
 ## Calculator-app
 
-This is a calculator app create with react.
+This is a calculator app created with react. All basic math calculations can be done.
+
+![screenshot](./cal.gif)
 
 ### See project live version
 [Live](https://calculatorr-app.herokuapp.com/)
@@ -26,9 +28,11 @@ This is a calculator app create with react.
  ```
 
 ### Author
-- Pascal Byabasaija
+- Pascal Byabasaija [Github](https://github.com/Byabasaija)
 
-[Github](https://github.com/Byabasaija)
 
+### Contribution 
+
+Contributions, requests and issues are all welcome.
 ### License
 MIT
