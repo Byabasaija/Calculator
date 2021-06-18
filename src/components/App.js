@@ -36,9 +36,14 @@ const App = () => {
     return result;
   };
   return (
-    <div className="App">
-      <Display result={result()} />
-      <ButtonPannel handleClick={(label) => handleClick(label)} />
+    <div className="flex">
+
+      <h2>Let&apos;s do some math</h2>
+
+      <div className="App">
+        <Display result={result()} />
+        <ButtonPannel handleClick={(label) => handleClick(label)} />
+      </div>
     </div>
   );
 };

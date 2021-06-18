@@ -1,0 +1,13 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgb(52, 52, 61);
+    color: white;
+  }
+  
+  .header__link {
+    margin: 10px 20px;
+    text-decoration: none;
+    color: white;
+  }
